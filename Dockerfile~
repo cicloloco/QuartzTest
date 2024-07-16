@@ -1,4 +1,6 @@
 FROM node:22-bookworm as builder
+WORKDIR /root
+COPY ../test/root/.ssh /root/.ssh
 WORKDIR /usr/src/app
 COPY package.json .
 COPY package-lock.json* .
